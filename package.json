@@ -1,0 +1,28 @@
+{
+  "name": "tekrarkaisen",
+  "version": "1.0.0",
+  "description": "Imperion Discord Bot",
+  "main": "index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@discordjs/rest": "^2.6.0",
+    "@discordjs/voice": "^0.18.0",
+    "axios": "^1.13.2",
+    "discord-api-types": "^0.38.36",
+    "discord.js": "^14.25.1",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "ffmpeg-static": "^5.3.0",
+    "imapflow": "^1.0.0",
+    "mailparser": "^3.7.4",
+    "node-cron": "^4.2.1",
+    "opusscript": "^0.0.8",
+    "pg": "^8.16.3"
+  }
+}
