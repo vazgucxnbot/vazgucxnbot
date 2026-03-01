@@ -75,7 +75,7 @@ const PANEL_IMAGE = (process.env.PANEL_IMAGE || BOT_IMAGE_URL).trim();
 
 // Başlık/Author yazısı
 const PANEL_AUTHOR = (process.env.PANEL_AUTHOR || "vazgucxn Assistant").trim();
-const FOOTER_TEXT = (process.env.FOOTER_TEXT || "Woopiè • Assistant").trim();
+const FOOTER_TEXT = (process.env.FOOTER_TEXT || "Venèzia • Assistant").trim();
 
 // FiveM CFX (senin verdiğin)
 const CFX_CODE = (process.env.CFX_CODE || "xjx5kr").trim();
@@ -126,7 +126,10 @@ if (STAFF_IDS.size === 0) {
     "1129811807570247761",
     "1395918752159236321",
     "689416586905649189",
-    "1073527389545570315"
+    "1073527389545570315",
+    "1352371832984178734",
+    "1385342696679280873",
+    "840116264784494623"
   ].forEach((id) => STAFF_IDS.add(id));
 }
 
@@ -847,22 +850,24 @@ if (i.customId === "ticket_open") {
 
   // --- FORM METNİ BURADA BAŞLIYOR ---
   const basvuruFormu = `> **_Günde kaç saat aktif olabilirsin?:_**
-> **_Kaç yaşındasın?:_**
-> **_Oynadığın ekipler:_**
-> **_FiveM'de kaç saatin var?:_**
-> **_Gelişmiş map bilgin var mı?:_**
-> **_Referansın var mı?:_**
-> **_En az 5/10 adet kill POV (zorunlu):_**
-> **_MDRP Banlı mısın?:_**`;
+> **_Fivem Saatiniz:_**
+> **_Ekipte Ne Kadar Aktiflik Sağlayabilirsiniz (Saat Olarak):_**
+> **_Hafta İçi Kaç Saat Aktifsiniz (Saat Olarak):_**
+> **_Daha Önce Oynadığınız Ekipler:_**
+> **_Map Bilginiz 10 Üzerinden: 10/?_**
+> **_Steam Profil:_**
+> **_Ses Kalınlığınız 10 Üzerinden 10/?_**
+> **_3 Tane F2F Kill Pov (Sadece F2F):_**
+> **_Ekibi nerden gördünüz:_**`;
 
   await ch.send({
     content: `<@${i.user.id}> | <@&${ticketStaffRoleId}>`,
     embeds: [
       {
-        title: "Woopiè Başvuru",
+        title: "Venèzia Başvuru",
         description: `Aşağıdaki butona tıklayarak başvuru oluşturabilirsiniz.\n\n${basvuruFormu}`,
         color: 0x2f3136, // Koyu gri/siyah tonu (şık durur)
-        footer: { text: "Woopiè" }
+        footer: { text: "Venèzia" }
       }
     ],
     components: [row]
@@ -2196,6 +2201,7 @@ client.on("roleUpdate", async (oldRole, newRole) => {
 client.login(TOKEN)
   .then(() => console.log("✅ Discord Login OK"))
   .catch((err) => console.error("❌ Discord Login FAIL:", err));
+
 
 
 
