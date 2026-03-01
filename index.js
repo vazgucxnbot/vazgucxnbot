@@ -68,7 +68,7 @@ const isOwner = (id) => OWNER_IDS.includes(id);
 // Görsel TEK NOKTA: bunu değiştirince her embed/panel resmi değişsin
 const BOT_IMAGE_URL =
   (process.env.BOT_IMAGE_URL || process.env.BOT_IMAGE || "").trim() ||
-  "https://media.discordapp.net/attachments/1464697274692010137/1471608248544137407/giphy.gif?ex=698f8d7b&is=698e3bfb&hm=498dd45fbafc43408085520ec28979db587085cf2b10d13c798167101541210e&=";
+  "https://images-ext-1.discordapp.net/external/D-4bcBVvSNPTmB4Su423xwv98Aks50-afUMZWYseR74/https/cdn.discordapp.com/icons/1414937526241591298/33367d940a837046be3710b5f9a0f30d.webp?format=webp";
 
 const THUMB_URL = (process.env.THUMB_URL || BOT_IMAGE_URL).trim();
 const PANEL_IMAGE = (process.env.PANEL_IMAGE || BOT_IMAGE_URL).trim();
@@ -2201,6 +2201,7 @@ client.on("roleUpdate", async (oldRole, newRole) => {
 client.login(TOKEN)
   .then(() => console.log("✅ Discord Login OK"))
   .catch((err) => console.error("❌ Discord Login FAIL:", err));
+
 
 
 
