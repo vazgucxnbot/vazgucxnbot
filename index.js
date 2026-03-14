@@ -68,7 +68,7 @@ const isOwner = (id) => OWNER_IDS.includes(id);
 // Görsel TEK NOKTA: bunu değiştirince her embed/panel resmi değişsin
 const BOT_IMAGE_URL =
   (process.env.BOT_IMAGE_URL || process.env.BOT_IMAGE || "").trim() ||
-  "https://images-ext-1.discordapp.net/external/D-4bcBVvSNPTmB4Su423xwv98Aks50-afUMZWYseR74/https/cdn.discordapp.com/icons/1414937526241591298/33367d940a837046be3710b5f9a0f30d.webp?format=webp";
+  "https://media.discordapp.net/attachments/1477713040467165246/1482441677871382600/2c6e137a3e286d0d557e74dabba431cc.webp?ex=69b6f6e6&is=69b5a566&hm=63a26fcc1a2d3ccb4ae66ebcc64d0382dc06d809eef399c4e1e335f9d4aba871&=&format=webp";
 
 const THUMB_URL = (process.env.THUMB_URL || BOT_IMAGE_URL).trim();
 const PANEL_IMAGE = (process.env.PANEL_IMAGE || BOT_IMAGE_URL).trim();
@@ -849,7 +849,7 @@ if (i.customId === "ticket_open") {
   );
 
   // --- FORM METNİ BURADA BAŞLIYOR ---
-  const basvuruFormu = `> **_Günde kaç saat aktif olabilirsin?:_**
+  const basvuru = `> **_Günde kaç saat aktif olabilirsin?:_**
 > **_Fivem Saatiniz:_**
 > **_Ekipte Ne Kadar Aktiflik Sağlayabilirsiniz (Saat Olarak):_**
 > **_Hafta İçi Kaç Saat Aktifsiniz (Saat Olarak):_**
@@ -865,7 +865,7 @@ if (i.customId === "ticket_open") {
     embeds: [
       {
         title: "Venèzia Başvuru",
-        description: `Aşağıdaki butona tıklayarak başvuru oluşturabilirsiniz.\n\n${basvuruFormu}`,
+        description: `Aşağıdaki butona tıklayarak başvuru oluşturabilirsiniz.\n\n${basvuru}`,
         color: 0x2f3136, // Koyu gri/siyah tonu (şık durur)
         footer: { text: "Venèzia" }
       }
@@ -1624,7 +1624,7 @@ if (cmd === "nuke") {
           { name: "\u200b", value: "\u200b", inline: true }
         ],
         description:
-          `${EMOJI.right} ・ Formu doldurduktan sonra bekleyiniz alım sorumlularımız en kısa sürede ilgilenecektir.`,
+          `${EMOJI.right} ・ Aşağıdaki butona basıp başvuru açabilirsiniz.`,
         image: PANEL_IMAGE
       });
 
